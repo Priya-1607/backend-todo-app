@@ -1,0 +1,19 @@
+class ErrorHandler extends Error{
+    constructor(message,statusCode){
+        super(message)
+        this.statusCode=statusCode
+    }
+
+}
+
+
+export const errorMiddlerware=(err,req,res,next)=>{
+    err.message= err.message || "Internl Error Message"
+    err.statusCode= err.statusCode || "Internl Error Message"
+    return  res.status(err.statusCode).json({
+          success:false,
+          message:err.message
+      })
+  }
+
+  export default ErrorHandler;
