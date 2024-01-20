@@ -1,5 +1,6 @@
 import { User } from "../modules/user.js";
 import bcrypt from "bcrypt"
+import { MongooseError } from 'mongoose';
 import jwt from "jsonwebtoken"
 import { sendCookie } from "../utils/feture.js";
 import ErrorHandler from "../middleware/error.js";

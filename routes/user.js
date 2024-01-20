@@ -2,7 +2,7 @@ import express  from "express";
 import { User } from "../modules/user.js";
 import { isAuthenticated } from "../middleware/auth.js";
 import { getAlluser, getMyProfile, login, logout} from "../controllers/user.js";
-
+import { MongooseError } from 'mongoose';
 
 import { register } from "../controllers/user.js";
 const router = express.Router();

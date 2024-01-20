@@ -1,5 +1,6 @@
 import { User } from "../modules/user.js";
 import jwt from "jsonwebtoken";
+import { MongooseError } from 'mongoose';
 export const isAuthenticated= async(req,res,next)=>{
     const {token}=req.cookies;
     if(!token)

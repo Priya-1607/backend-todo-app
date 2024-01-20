@@ -7,7 +7,7 @@ import { config } from "dotenv";
 import cookieParser from "cookie-parser";
 import { errorMiddlerware } from "./middleware/error.js";
 import cors from "cors"
-
+import { MongooseError } from 'mongoose';
 config({
     path:"./data/config.env"
 })

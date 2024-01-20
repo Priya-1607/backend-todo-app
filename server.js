@@ -1,6 +1,6 @@
 import { app } from "./app.js";
 import { connectDB } from "./data/database.js";
-
+import { MongooseError } from 'mongoose';
 
 connectDB()
 console.log(process.env.PORT);
